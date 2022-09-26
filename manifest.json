@@ -1,0 +1,37 @@
+{
+    "name": "IG Exports",
+    "description": "Exporta los seguidores de una cuenta",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "unlimitedStorage",
+        "contextMenus",
+        "cookies",
+        "tabs",
+        "notifications",
+        "activeTab",
+        "downloads",
+        "background"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "jquery-2.2.4.min.js",
+                "moment.min.js",
+                "background.js"
+            ],
+            "css": [
+                "bootstrap.min.css"
+            ],
+            "matches": [
+                "http://instagram.com/*",
+                "https://instagram.com/*",
+                "http://www.instagram.com/*",
+                "https://www.instagram.com/*"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
